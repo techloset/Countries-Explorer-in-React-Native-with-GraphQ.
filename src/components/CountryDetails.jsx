@@ -6,7 +6,6 @@ import { GET_COUNTRY_DETAILS } from "./schema";
 
 const CountryDetail = () => {
   const { countryName } = useParams();
-  console.log(countryName)
   const [getCountryDetails, { loading, error, data }] =
     useLazyQuery(GET_COUNTRY_DETAILS);
   const [countryDetails, setCountryDetails] = useState(null);

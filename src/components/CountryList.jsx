@@ -6,14 +6,12 @@ import {  useNavigate  } from "react-router-dom";
 const CountryList = () => {
   const [getCountries, { loading, error, data }] = useLazyQuery(GET_COUNTRIES);
   const [searchQuery, setSearchQuery] = useState("");
-  console.log("getCountries",getCountries)
   const navigation = useNavigate();
 
   React.useEffect(() => {
     getCountries();
   }, [getCountries]);
 
-  console.log("getCountries",getCountries)
 
 
   if (loading) {
